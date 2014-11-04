@@ -1,0 +1,6 @@
+cd qemu-0.12.3/
+make
+cd pyqemu/
+make all
+
+compiled with CYGWIN_NT-5.1 v-xp-sp3 1.7.7(0.230/5/3) 2010-08-31 09:58 i686 Cygwin
