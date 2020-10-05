@@ -1,0 +1,24 @@
+import math
+import matplotlib.pyplot as plt
+def fact(i):
+    if i == 0 or i == 1:
+        return 1
+    else:
+        return i*fact(i-1)
+
+l=[]
+s=[]
+suma=0
+for t in range(0,10):
+    for i in range(0,10):
+        suma = suma+(pow(t,(2*i))/(fact(i)*pow(2,i)))
+    l.append(suma)
+    s.append(math.exp(pow(t,2)/2))
+    suma=0
+
+for i in range(len(l)):
+    print(f' {i} :  {l[i]}    ------   {s[i]} ')
+i = [0,1,2,3,4,5,6,7,8,9]
+plt.plot(i,s)
+plt.plot(i,l)
+plt.show()
